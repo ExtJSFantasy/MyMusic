@@ -1,0 +1,25 @@
+{
+	"index.html": {
+		"resources": [
+			"js/vue.js",
+			"img/face.jpg",
+			"fonts/mui.ttf",
+			"fonts/icomoon.ttf",
+			"img/app.png",
+			"css/style.css",
+			"js/mui.js",
+			"css/mui.css",
+			"mine.html",
+			"img/mp.png",
+			"img/mq.png",
+			"img/mn.png",
+			"img/mo.png"
+		],
+		"refer": [
+			"mine.html",
+			"home/dstate.html",
+			"home/find.html",
+			"home/mine.html"
+		]
+	}
+}

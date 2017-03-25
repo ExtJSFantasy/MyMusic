@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.css">
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			
+			p {
+				text-indent: 22px;
+			}
+			h5:after{
+				font-family: "icomoon";
+				content: "\e315";
+				
+			}
+			h5:before{
+				font-family: "icomoon";
+				content: "\e5d4";
+			}
+			h5, .mui-h5 {
+			    font-size: 14px;
+			    font-weight: 700;
+			    color: #333;
+			}
+			td, th {
+			    padding: 0;
+			    position: relative;
+			}
+			table {
+			    table-layout: fixed;
+			    border-spacing: 0;
+			    border-collapse: collapse;
+			}
+			td, th {
+			    padding: 0;
+			    position: relative;
+			    white-space: nowrap;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			}
+			span.mui-icon {
+				font-size: 14px;
+				color: #007aff;
+				margin-left: -15px;
+				padding-right: 10px;
+			}
+			.mui-off-canvas-left {
+				color: #fff;
+			}
+			.title {
+				margin: 35px 15px 10px;
+			}
+			.title+.content {
+				margin: 10px 15px 35px;
+				color: #bbb;
+				text-indent: 1em;
+				font-size: 14px;
+				line-height: 24px;
+			}
+			.mui-control-content .mui-loading {
+				margin-top: 50px;
+			}
+			input {
+				color: #000;
+			}
+			li {list-style-type:none; color: black; margin-bottom: .5em;}
+			 /*ul > li:first-child{background-color: #2AC845;}*/
+		</style>
+	</head>
+
+	<body>
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+			<!--侧滑菜单部分-->
+			<aside id="offCanvasSide" class="mui-off-canvas-left">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div id="myhead">
+							<div class="myphoto">
+								<img id ="head" src="img/app.png" />
+							</div>
+							<div>
+								<p class="myname">SenchaExtJS</p>
+								<p class="lv">lv.3</p>
+								<p class="signin">签到</p>
+							</div>
+						</div>
+						
+						<div class="mycontent">
+							<ul>
+								<li class="mymessage">我的消息</li>
+								<li class="myvip">会员中心</li>
+								<li class="myshop">商城</li>
+								<li class="onlinelis">在线听歌免流量</li>
+							</ul>
+						</div>
+						<div class="emp"></div>
+						<div>
+							<ul>
+								<li class="myfriends">我的好友</li>
+								<li class="nearpeople">附近的人</li>
+							</ul>
+						</div>
+						<div class="emp"></div>
+						<div id="app4">
+							<ul>
+								<li class = "pskin">个性皮肤</li>
+								<li class = "shound">听歌识曲</li>
+								<li class="freeod">定时停止播放</li>
+								<li class="malarm">音乐闹钟</li>
+								<li class="cstyle">驾驶模式</li>
+								<li class="mcloud">音乐云盘</li>
+							</ul>
+						</div>
+					</div>
+					<nav class="mui-bar mui-bar-tab">
+				        <a id="nmode" class="mui-tab-item">
+				            <span class="nmode">夜间模式</span>
+				        </a>
+				        <a id="setting" class="mui-tab-item">
+				            <span class="setting">设置</span>
+				        </a>
+				        <a id="exit" class="mui-tab-item">
+				            <span class="exit">退出</span>
+				        </a>
+			    </nav>
+				</div>
+				
+			</aside>
+			<!--主界面部分-->
+			<div class="mui-inner-wrap">
+				<header class="mui-bar mui-bar-nav">
+					<a href="#offCanvasSide" class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"></a>
+					<a class="mui-action-back mui-btn mui-btn-link mui-pull-right">搜索</a>
+					<nav class="mui-bar mui-bar-tab" id="nav">
+				        <a id="mine" class="mui-tab-item" href="#tabbar">
+				            <span>我的</span>
+				        </a>
+				        <a id="find" class="mui-tab-item mui-active" href="#tabbar-with-chat">
+				            <span>发现</span>
+				        </a>
+				        <a id="dstate" class="mui-tab-item" href="#tabbar-with-contact">
+				            <span>动态</span>
+				        </a>
+			    	</nav>
+				</header>
+				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="mui-content">
+							<div id="tabbar" class="mui-control-content">
+								<h1> 第一个</h1>
+							</div>
+							<div id="tabbar-with-chat" class="mui-control-content mui-active">
+								<div id="slider" class="mui-slider">
+									<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+										<a class="mui-control-item mui-active" href="#item1mobile">
+										个性推荐
+										</a>
+										<a class="mui-control-item" href="#item2mobile">
+										歌单
+										</a>
+										<a class="mui-control-item" href="#item3mobile">
+										主播电台
+										</a>
+										<a class="mui-control-item" href="#item4mobile">
+										排行榜
+										</a>
+									</div>
+									<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-3"></div>
+									<div class="mui-slider-group">
+										<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+											<div id="scroll1" class="mui-scroll-wrapper">
+												<div class="mui-scroll">
+													<ul class="mui-table-view">
+														<li class="mui-table-view-cell">
+															<div id="slider2" class="mui-slider" >  
+													            <div class="mui-slider-group mui-slider-loop">  
+													                <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->  
+													                <div class="mui-slider-item mui-slider-item-duplicate">  
+													                    <a href="#" style="height: 150px; text-decoration: none">  
+													                        <img style="height: 150px;" src="img/one.jpg">
+													                    </a>  
+													                </div>  
+													                <!-- 第一张 -->  
+													                <div class="mui-slider-item">  
+													                    <a href="#" style="height: 150px; text-decoration: none">  
+													                        <img style="height: 150px;" src="img/two.jpg">  
+													                    </a>  
+													                </div>  
+													                <!-- 第二张 -->  
+													                <div class="mui-slider-item">  
+													                    <a href="#" style="height: 150px; text-decoration: none">  
+													                        <img style="height: 150px;" src="img/three.jpg"> 
+													                    </a>  
+													                </div>  
+													                <!-- 第三张 -->  
+													                <div class="mui-slider-item">
+													                    <a href="#" style="height: 150px; text-decoration: none">  
+													                        <img style="height: 150px;" src="img/four.jpg">  
+													                    </a>  
+													                </div>  
+													                <!-- 第四张 -->  
+													                <div class="mui-slider-item">  
+													                    <a href="#" style="height: 150px; text-decoration: none">  
+													                        <img style="height: 150px;" src="img/one.jpg">
+													                    </a>  
+													                </div>  
+													                <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->  
+													                <div class="mui-slider-item mui-slider-item-duplicate">  
+													                    <a href="#" style="height: 150px; text-decoration: none">  
+													                        <img style="height: 150px;" src="img/two.jpg">  
+													                    </a>  
+													                </div>  
+													            </div>  
+													            <div class="mui-slider-indicator">  
+													                <div class="mui-indicator mui-active"></div>  
+													                <div class="mui-indicator"></div>  
+													                <div class="mui-indicator"></div>  
+													                <div class="mui-indicator"></div>  
+													            </div>  
+													        </div>  
+														</li>
+														<li class="mui-table-view-cell">
+															<div id="app5">
+																<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																  <tr>
+																    <td align="center"><img style ="width: 60px;" src="img/myfm.png"></td>
+																    <td align="center"><img style ="width: 60px;" src="img/date.png"><span id="erveryday"></span></td>
+																    <td align="center"><img style ="width: 60px;" src="img/dcloudhot.png"></td>
+																  </tr>
+																  <tr>
+																    <td align="center">私人FM</td>
+																    <td align="center">每日歌曲推荐</td>
+																    <td align="center">云音乐热歌榜</td>
+																  </tr>
+																</table>
+																	<!--<ol>
+																		<li v-for="items in item">
+																			 <img v-bind:src = items.imgsrc>
+																			{{items.name}}</li>
+																	</ol>-->
+															</div>
+														</li>
+														<li class="mui-table-view-cell">
+															<div id="app6">
+																<h5>推荐歌单</h5>
+																<table id="tbody-result" width="100%" border="0" cellspacing="0" cellpadding="0">
+																	<tbody>
+																		<tr>
+																		  	<tr>
+																			    <td align="center"><img style="height: 50px;" src="http://p1.music.126.net/Guts-lgusjkkOVn07JVOZg==/109951162839310079.jpg?param=140y140" alt="img/mn.png"/> <span class="show">22万</span></td>
+																			    <td align="center"><img style="height: 50px;" src="http://p1.music.126.net/eVn7_QRteYnr6xIUNqovKg==/18821440046007508.jpg?param=140y140" alt="img/mo.png"/> <span class="show">2万</span></td>
+																			    <td align="center"><img style="height: 50px;" src="http://p1.music.126.net/W6Hii--iDQk5IoO3o7LMIw==/1275433488288864.jpg?param=140y140" alt="mq.png"/> <span class="show">225万</span></td>
+																		  	</tr>
+																		  	<tr>
+																			    <td align="center"><span>|复古味| 小酒馆的微醺慢时光——</span></td>
+																			    <td align="center">「跑步必备」一颗强大的心脏需要节奏的预热</td>
+																			    <td align="center">背景音乐珍藏，总有一天你会用上的</td>
+																		  	</tr>
+																	  	</tr>
+																	  	<tr>
+																	  		<tr>
+																			 	<td align="center"><img style="height: 50px;" src="http://p1.music.126.net/u-2mUMMQyIgBbvMknz8sCA==/19085322834978932.jpg?param=140y140"/> <span class="show">72万</span></td>
+																			    <td align="center"><img style="height: 50px;" src="http://p1.music.126.net/inF4XDC647GUA9oQvUWJVA==/18698294743642359.jpg?param=140y140"/> <span class="show">32万</span></td>
+																			    <td align="center"><img style="height: 50px;" src="http://p1.music.126.net/r_hTvhq4l_aTfdGzu2XyZg==/18934689741969595.jpg?param=140y140"/> <span class="show">62万</span></td>
+																		  	</tr>
+																		  	<tr>
+																			    <td align="center">Tips 如何让她喜笑颜开</td>
+																			    <td align="center">「民谣」你要学会长大，一个人抵过千军万马</td>
+																			    <td align="center">穿透灵魂的低频幻境，欲罢不能的精神毒药</td>
+																			</tr>
+																		</tr>
+																 	 </tbody>
+																</table>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div id="item2mobile" class="mui-slider-item mui-control-content">
+											<div id="scroll2" class="mui-scroll-wrapper">
+												<div class="mui-scroll">
+													<div class="mui-loading">
+														<div class="mui-spinner">
+														</div>
+													</div>
+												</div>
+											</div>	
+										</div>
+										<div id="item3mobile" class="mui-slider-item mui-control-content">
+											<div id="scroll3" class="mui-scroll-wrapper">
+												<div class="mui-scroll">
+													<div class="mui-loading">
+														<div class="mui-spinner">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="item4mobile" class="mui-slider-item mui-control-content">
+											<div id="scroll4" class="mui-scroll-wrapper">
+												<div class="mui-scroll">
+													<div class="mui-loading">
+														<div class="mui-spinner">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="tabbar-with-contact" class="mui-control-content">
+								<div>这是div模式选项卡中的第3个子页面，该页面展示一个通讯录示例.</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div id="bottomshow">
+					<img  id="singerpic" src="img/app.png"/>
+					<!--<div id="runorstop" style="float: right;">
+						<a id='more'></a>
+					</div>-->
+					<div style="float: right;">
+						<a class="songname">春天里</a>
+						<a class="songname">汪峰</a>
+					</div>
+				</div>
+				<!-- off-canvas backdrop -->
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+		<script src="js/mui.js"></script>
+		<script type="text/javascript" src="js/vue.js" ></script>
+		
+		<script>
+			mui.init({  
+					swipeBack: false,
+                    /*subpages:[//先加载首页  
+                        {  
+                          url:'index.html',  
+                          id:'index',  
+                          styles:{  
+                             top:'0px',  
+                                bottom:'60px'  
+                          }  
+                        }  
+                          
+                    ], */ 
+                    preloadPages:[//缓存其他页面  
+                        {  
+                          url:'home/mine.html',  
+                          id:'mine', 
+                          styles:{
+                          	top:'50px'
+                          }
+                        },
+                        {  
+                          url:'home/find.html',  
+                          id:'find', 
+                          styles:{
+                          	top:'50px'
+                          }
+                        },
+                        {  
+                          url:'home/dstate.html',  
+                          id:'dstate', 
+                          styles:{
+                          	top:'50px'
+                          }
+                        }
+                    ]  
+                      
+                });
+			 //主界面和侧滑菜单界面均支持区域滚动；
+			mui('#offCanvasSideScroll').scroll();
+			mui('#offCanvasContentScroll').scroll();
+			 //实现ios平台原生侧滑关闭页面；
+			if (mui.os.plus && mui.os.ios) {
+				mui.plusReady(function() { //5+ iOS暂时无法屏蔽popGesture时传递touch事件，故该demo直接屏蔽popGesture功能
+					plus.webview.currentWebview().setStyle({
+						'popGesture': 'none'
+					});
+				});
+			}
+			var slider2 = mui("#slider2");
+			
+			//plus.webview.currentWebview().setStyle({scrollIndicator:'none'});
+            slider2.slider({  
+    			interval: 1000
+        	});
+            (function($) {
+				$('#scroll1').scroll({
+					indicators: false //是否显示滚动条
+				});
+				$('#offCanvasSideScroll').scroll({
+					indicators: false //是否显示滚动条
+				});
+				$('#offCanvasContentScroll').scroll({
+					indicators: false //是否显示滚动条
+				});
+			});
+			/*$.('.mui-scroll-wrapper').scroll({
+				indicators: true //是否显示滚动条
+			})(mui);*/
+			//每日歌曲推荐
+			var _date = new Date();
+			var _everydate = document.getElementById('erveryday').innerHTML = _date.getDate();
+			//根据选择获取各个面板
+			var html2 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第二个选项卡子项-1</li></ul>';
+			var item2 = document.getElementById('item2mobile');
+			var html3 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第三个选项卡子项-1</li></ul>';
+			var item3 = document.getElementById('item3mobile');
+			var html4 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第四个选项卡子项-1</li></ul>';
+			var item4 = document.getElementById('item4mobile');
+			document.getElementById('slider').addEventListener('slide', function(e) {
+				if(e.detail.slideNumber === 1) {
+					if(item2.querySelector('.mui-loading')) {
+						setTimeout(function() {
+							item2.querySelector('.mui-scroll').innerHTML = html2;
+						}, 500);
+					}
+				} else if(e.detail.slideNumber === 2) {
+					if(item3.querySelector('.mui-loading')) {
+						setTimeout(function() {
+							item3.querySelector('.mui-scroll').innerHTML = html3;
+						}, 500);
+					}
+				}else if(e.detail.slideNumber === 3) {
+					if(item4.querySelector('.mui-loading')) {
+						setTimeout(function() {
+							item4.querySelector('.mui-scroll').innerHTML = html4;
+						}, 500);
+					}
+				}
+			});
+			/*var app4  = new Vue({
+				el:'#app4',
+				data:{
+					item:[
+						{name:'个人皮肤'},
+						{name:'听歌识曲'},
+						{name:'定时停止播放'},
+						{name:'音乐闹钟'},
+						{name:'驾驶模式'},
+						{name:'音乐云盘'},
+					]
+				}
+			});*/
+			/*var app5 = new Vue({
+				el:'#app5',
+				data:{
+					item:[
+						{name:'xiangdeshan',imgsrc:'img/mo.png'},
+						{name:'zhangjiayu',imgsrc:'img/mn.png'},
+						{name:'wanchen',imgsrc:'img/mp.png'}
+					]
+				}
+			});*/
+			//document.getElementsByTagName('ul')[0].getElementsByTagName('li')[0].style.color = "#2AC845";
+			//document.getElementsByTagName('ul')[0].getElementsByTagName('li')[0].style.before
+			//console.log(document.getElementsByTagName('ul')[0].getElementsByTagName('li'));
+			/*mui(".mui-bar-tab").on('tap','.mui-tab-item',function(){
+			 //获取id
+			  var id = this.getAttribute("id");
+			  //传值给详情页面，通知加载新数据
+			  //mui.fire(mine,'getMine',{id:id});
+			  //打开新闻详情
+			  mui.openWindow({
+			    id:'mine',
+			    url:'home/mine.html',
+			  });
+			})*/
+			document.addEventListener('touchstart', function(event) {
+				console.log(3213123132131);
+			    // 判断默认行为是否可以被禁用
+			    if (event.cancelable) {
+			    	console.log(event.defaultPrevented);
+			        // 判断默认行为是否已经被禁用
+			        if (!event.defaultPrevented) {
+			        	console.log(4564645645);
+			            event.preventDefault();
+			        }
+			    }
+			}, false);
+			/*mui.plusReady(function(){   
+                // 获取所有Webview窗口  
+                var winAll=plus.webview.all();//获取所有窗体  
+                console.log(JSON.stringify(winAll))
+                var mine,find,dstate  
+                mui("#nav").on("tap","#mine",function(){//点击触发   
+                	console.log(32123132);
+                    mine=plus.webview.getWebviewById("mine"); 
+                    console.log(JSON.stringify(mine))   
+                    mine.show()  
+	                find.hide()//这一步必须有  
+	                dstate.hide()//这一步必须有  
+                })   
+                mui("#nav").on("tap","#find",function(){//点击触发  
+                    find=plus.webview.getWebviewById("find");  
+                    find.show()  
+                      
+                })  
+                mui("#nav").on("tap","#dsate",function(){//点击触发  
+                    dstate=plus.webview.getWebviewById("dsate");  
+                    dstate.show()  
+                      
+                })  
+            }); */
+		</script>
+	</body>
+
+</html>

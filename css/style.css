@@ -1,0 +1,292 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?javh6z');
+  src:  url('../fonts/icomoon.eot?javh6z#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?javh6z') format('truetype'),
+    url('../fonts/icomoon.woff?javh6z') format('woff'),
+    url('../fonts/icomoon.svg?javh6z#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.mui-off-canvas-left, .mui-off-canvas-right {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    visibility: hidden;
+    box-sizing: content-box;
+    width: 70%;
+    min-height: 100%;
+    background: #f7f7f7;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mui-bar-tab .mui-tab-item {
+    display: table-cell;
+    overflow: hidden;
+    width: 1%;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #929292;
+    font-size: .8em;
+}
+/*.mui-bar-tab .mui-tab-item.mui-active {
+    color: #929292;
+}*/
+.mui-bar {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    height: 44px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-bottom: 0;
+    background-color: #efeff4;
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .85);
+    box-shadow: 0 0 1px rgba(0, 0, 0, .85);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.mui-fullscreen .mui-segmented-control ~ .mui-slider-group {
+    position: inherit;
+    top: 0px;
+    width: 100%;
+}
+/*轮播图的高度*/
+.mui-control-content {
+   min-height: 590px;
+}
+.mui-segmented-control.mui-segmented-control-inverted ~ .mui-slider-progress-bar {
+    background-color: #dd524d;
+}
+/*默认选中个人推荐红色*/
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+    color: #dd524d;
+    border-bottom: 2px solid #007aff;
+    background: none;
+}
+/*最上端的字体*/
+.mui-bar-tab .mui-tab-item {
+    display: table-cell;
+    overflow: hidden;
+    width: 1%;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #929292;
+    font-size: 1em;
+}
+/*搜索按钮*/
+.mui-bar .mui-btn-link {
+    font-size: 1em;
+    line-height: 39px;
+    top: 0;
+    padding: 0;
+    color: #007aff;
+    border: 0;
+}
+/*左边按钮*/
+.mui-bar .mui-icon {
+    font-size: 24px;
+    position: relative;
+    z-index: 20;
+    padding-top: 6px;
+    padding-bottom: 10px;
+}
+#app4{
+	margin-bottom: 50px;
+}
+/*推荐歌单右上角数字*/
+.show{
+	  position: absolute;
+    top: 1px;
+    right: 2px;
+    color: #efeff4;
+}
+/*私人FM*/
+#per:before{
+	font-family: "icomoon";
+	content: "\e01d";
+	font-size: 30px;
+}
+/*每日歌曲推荐*/
+/*#erveryday:before{
+	font-family: "icomoon";
+	content: "\e055";
+	font-size: 30px;
+}*/
+#erveryday{
+  position: absolute;
+	top: 22px;
+	left: 0px;
+	margin-left: 50px;
+}
+#middle{
+	width: 60px;
+}
+#dcloudhot:before{
+	font-family: "icomoon";
+	content: "\e01d";
+	font-size: 30px;
+}
+.show:before{
+	font-family: "icomoon";
+	content: "\e310";
+	color: #efeff4;
+}
+.pskin:before{
+		font-family: "icomoon";
+		content: "\e021";
+		margin-right: .5em;
+}
+.shound:before{
+		font-family: "icomoon";
+		content: "\e049";
+		margin-right: .5em;
+}
+.freeod:before{
+		font-family: "icomoon";
+		content: "\e8b5";
+		margin-right: .5em;
+}
+.malarm:before{
+		font-family: "icomoon";
+		content: "\e191";
+		margin-right: .5em;
+}
+.cstyle:before{
+		font-family: "icomoon";
+		content: "\e531";
+		margin-right: .5em;
+}
+.mcloud:before{
+		font-family: "icomoon";
+		content: "\e2c2";
+		margin-right: .5em;
+}
+.setting:before{
+		font-family: "icomoon";
+		content: "\e8b8";
+		margin-right: .5em;
+}
+.exit:before{
+		font-family: "icomoon";
+		content: "\e8ac";
+		margin-right: .5em;
+}
+.nmode:before{
+		font-family: "icomoon";
+		content: "\e3a9";
+		margin-right: .5em;
+}
+.ellipsis{
+		width:33.33333%;  
+		word-break:keep-all;/* 不换行 */  
+		white-space:nowrap;/* 不换行 */  
+		overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */  
+		text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用*/
+}
+#head{
+    border: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    margin-left: .3em;
+    margin-top: 3em;
+}
+#bottomshow{
+	  bottom: 0px;
+    position: absolute;
+    width: 100%;
+}
+#singerpic{
+	width: 50px;
+	height: 50px;
+	margin-left: 5px;
+}
+#myhead{
+	background-image: url(../img/face.jpg);
+}
+.myname{
+	float:left
+}
+.lv{
+	float:left
+}
+.emp{
+	  height: .3em;
+    background: #e3e3e3;
+}
+.songname{
+	   text-decoration: none;
+    color: #222;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    margin-bottom: 6px;
+    margin-left: 3px;
+}
+.mui-icon-bars:before {
+		font-family: "icomoon";
+    content: '\e8ee';
+}
+.mymessage:before{
+	font-family: "icomoon";
+	content: "\e0e1";
+	margin-right: .5em;
+}
+.myvip:before{
+	font-family: "icomoon";
+	content: "\e39f";
+	margin-right: .5em;
+}
+.myshop:before{
+	font-family: "icomoon";
+	content: "\e8cc";
+	margin-right: .5em;
+}
+.onlinelis:before{
+	font-family: "icomoon";
+	content: "\e310";
+	margin-right: .5em;
+}
+.myfriends:before{
+	font-family: "icomoon";
+	content: "\e7ff";
+	margin-right: .5em;
+}
+.nearpeople:before{
+	font-family: "icomoon";
+	content: "\e8b4";
+	margin-right: .5em;
+}
+#runorstop:before{
+	font-family: "icomoon";
+	content: "\e903";
+}
+#more:before{
+	font-family: "icomoon";
+	content: "\e05f";
+}
