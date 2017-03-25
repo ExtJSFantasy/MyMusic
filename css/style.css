@@ -71,9 +71,16 @@
     top: 0px;
     width: 100%;
 }
+/*每个list子项高度*/
+.mui-table-view-cell {
+    position: relative;
+    overflow: hidden;
+    padding: 9px 15px;
+    -webkit-touch-callout: none;
+}
 /*轮播图的高度*/
 .mui-control-content {
-   min-height: 590px;
+   min-height: 800px;
 }
 .mui-segmented-control.mui-segmented-control-inverted ~ .mui-slider-progress-bar {
     background-color: #dd524d;
@@ -219,11 +226,38 @@
 	  bottom: 0px;
     position: absolute;
     width: 100%;
+    background: #f7f7f7;
 }
 #singerpic{
 	width: 50px;
 	height: 50px;
 	margin-left: 5px;
+	margin-bottom: 4px;
+	margin-top: 3px;
+}
+#playorlist:before{
+	font-family: "icomoon";
+	content: "\e038";
+	font-size: 30px;
+	margin-right: 10px;
+}
+#playorlistchange:before{
+	font-family: "icomoon";
+	content: "\e036";
+	font-size: 30px;
+	margin-right: 10px;
+}
+#playorlistchange:after{
+	font-family: "icomoon";
+	content: "\e05f";
+	font-size: 30px;
+	margin-right: 5px;
+}
+#playorlist:after{
+	font-family: "icomoon";
+	content: "\e05f";
+	font-size: 30px;
+	margin-right: 5px;
 }
 #myhead{
 	background-image: url(../img/face.jpg);
@@ -289,4 +323,41 @@
 #more:before{
 	font-family: "icomoon";
 	content: "\e05f";
+}
+/*mine*/
+.mui-navigate:before{
+	font-family: "icomoon";
+	content: "\e313";
+}
+#listsetting:before {
+    font-family: "icomoon";
+    content: "\e8b8";
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.mui-table-view-cell.mui-collapse.mui-active>.mui-navigate:before{
+	font-family: "icomoon";
+	content: "\e315";
+}
+/*动态*/
+.like:before{
+	font-family: "icomoon";
+  content: "\e8dc";
+}
+.comment:before{
+	font-family: "icomoon";
+  content: "\e0cb";
+}
+.share:before{
+	font-family: "icomoon";
+  content: "\e80d";
+}
+#foplus:before{
+	font-family: "icomoon";
+	content: "\e145" ;
+}
+#location:before{
+	font-family: "icomoon";
+	content: "\e55c";
 }

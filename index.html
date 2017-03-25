@@ -49,6 +49,9 @@
 			    overflow: hidden;
 			    text-overflow: ellipsis;
 			}
+			p {
+			    text-indent: 0px;
+			}
 			span.mui-icon {
 				font-size: 14px;
 				color: #007aff;
@@ -158,7 +161,32 @@
 					<div class="mui-scroll">
 						<div class="mui-content">
 							<div id="tabbar" class="mui-control-content">
-								<h1> 第一个</h1>
+								<div id="app8">
+									<ul class="mui-table-view">
+										<li class="mui-table-view-cell" v-for="items in item" @tap="choose">
+											<img align="absmiddle" style="width: 30px;" v-bind:src = items.imgsrc />
+											<span id="imgcontent">
+												{{items.name}}
+											</span>
+											<h4 style="display: inline;">({{items.num}})</h4>
+										</li>
+									</ul>
+								</div>
+								<div >
+									<li class="mui-table-view-cell mui-collapse">
+										<a  class="mui-navigate" href="#">创建的歌单(1)<span style="float: right;" id="listsetting"></span></a>
+										<div class="mui-collapse-content">
+											<p>我喜欢的音乐</p>
+										</div>
+										
+									</li>
+									
+									<!--<span id="showlist">
+										创建歌单
+									</span>
+									<h4 style="display: inline;">(1)</h4>
+									<span id="listsetting"></span>-->
+								</div>
 							</div>
 							<div id="tabbar-with-chat" class="mui-control-content mui-active">
 								<div id="slider" class="mui-slider">
@@ -180,7 +208,7 @@
 									<div class="mui-slider-group">
 										<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
 											<div id="scroll1" class="mui-scroll-wrapper">
-												<div class="mui-scroll">
+												<!--<div class="mui-scroll">-->
 													<ul class="mui-table-view">
 														<li class="mui-table-view-cell">
 															<div id="slider2" class="mui-slider" >  
@@ -254,38 +282,35 @@
 														<li class="mui-table-view-cell">
 															<div id="app6">
 																<h5>推荐歌单</h5>
-																<table id="tbody-result" width="100%" border="0" cellspacing="0" cellpadding="0">
-																	<tbody>
-																		<tr>
-																		  	<tr>
-																			    <td align="center"><img style="height: 50px;" src="http://p1.music.126.net/Guts-lgusjkkOVn07JVOZg==/109951162839310079.jpg?param=140y140" alt="img/mn.png"/> <span class="show">22万</span></td>
-																			    <td align="center"><img style="height: 50px;" src="http://p1.music.126.net/eVn7_QRteYnr6xIUNqovKg==/18821440046007508.jpg?param=140y140" alt="img/mo.png"/> <span class="show">2万</span></td>
-																			    <td align="center"><img style="height: 50px;" src="http://p1.music.126.net/W6Hii--iDQk5IoO3o7LMIw==/1275433488288864.jpg?param=140y140" alt="mq.png"/> <span class="show">225万</span></td>
-																		  	</tr>
-																		  	<tr>
-																			    <td align="center"><span>|复古味| 小酒馆的微醺慢时光——</span></td>
-																			    <td align="center">「跑步必备」一颗强大的心脏需要节奏的预热</td>
-																			    <td align="center">背景音乐珍藏，总有一天你会用上的</td>
-																		  	</tr>
-																	  	</tr>
-																	  	<tr>
-																	  		<tr>
-																			 	<td align="center"><img style="height: 50px;" src="http://p1.music.126.net/u-2mUMMQyIgBbvMknz8sCA==/19085322834978932.jpg?param=140y140"/> <span class="show">72万</span></td>
-																			    <td align="center"><img style="height: 50px;" src="http://p1.music.126.net/inF4XDC647GUA9oQvUWJVA==/18698294743642359.jpg?param=140y140"/> <span class="show">32万</span></td>
-																			    <td align="center"><img style="height: 50px;" src="http://p1.music.126.net/r_hTvhq4l_aTfdGzu2XyZg==/18934689741969595.jpg?param=140y140"/> <span class="show">62万</span></td>
-																		  	</tr>
-																		  	<tr>
-																			    <td align="center">Tips 如何让她喜笑颜开</td>
-																			    <td align="center">「民谣」你要学会长大，一个人抵过千军万马</td>
-																			    <td align="center">穿透灵魂的低频幻境，欲罢不能的精神毒药</td>
-																			</tr>
-																		</tr>
-																 	 </tbody>
-																</table>
+																<ul class="mui-table-view mui-grid-view">
+															        <li class="mui-table-view-cell mui-media mui-col-xs-4">
+															            <a href="#">
+															                <img class="mui-media-object" src="http://p1.music.126.net/Guts-lgusjkkOVn07JVOZg==/109951162839310079.jpg?param=140y140">
+															                <div class="mui-media-body">|复古味| 小酒馆的微醺慢时光——</div></a></li>
+															        <li class="mui-table-view-cell mui-media mui-col-xs-4">
+															            <a href="#">
+															                <img class="mui-media-object" src="http://p1.music.126.net/eVn7_QRteYnr6xIUNqovKg==/18821440046007508.jpg?param=140y140">
+															                <div class="mui-media-body">「跑步必备」一颗强大的心脏需要节奏的预热</div></a></li>
+															        <li class="mui-table-view-cell mui-media mui-col-xs-4">
+															            <a href="#"><img class="mui-media-object" src="http://p1.music.126.net/W6Hii--iDQk5IoO3o7LMIw==/1275433488288864.jpg?param=140y140">
+															                <div class="mui-media-body">背景音乐珍藏，总有一天你会用上的</div></a></li>
+															        <li class="mui-table-view-cell mui-media mui-col-xs-4">
+															            <a href="#">
+															                <img class="mui-media-object" src="http://p1.music.126.net/u-2mUMMQyIgBbvMknz8sCA==/19085322834978932.jpg?param=140y140">
+															                <div class="mui-media-body">Tips 如何让她喜笑颜开</div></a></li>
+													                <li class="mui-table-view-cell mui-media mui-col-xs-4">
+													            		<a href="#">
+													                		<img class="mui-media-object" src="http://p1.music.126.net/inF4XDC647GUA9oQvUWJVA==/18698294743642359.jpg?param=140y140">
+													                		<div class="mui-media-body">「民谣」你要学会长大，一个人抵过千军万马</div></a></li>
+													                		<li class="mui-table-view-cell mui-media mui-col-xs-4">
+												            		<a href="#">
+												                		<img class="mui-media-object" src="http://p1.music.126.net/r_hTvhq4l_aTfdGzu2XyZg==/18934689741969595.jpg?param=140y140">
+												                		<div class="mui-media-body">穿透灵魂的低频幻境，欲罢不能的精神毒药</div></a></li>
+															    </ul>
 															</div>
 														</li>
 													</ul>
-												</div>
+												<!--</div>-->
 											</div>
 										</div>
 										<div id="item2mobile" class="mui-slider-item mui-control-content">
@@ -321,23 +346,51 @@
 									</div>
 								</div>
 							</div>
-							<div id="tabbar-with-contact" class="mui-control-content">
-								<div>这是div模式选项卡中的第3个子页面，该页面展示一个通讯录示例.</div>
+							<div  id="tabbar-with-contact" class="mui-control-content" style="margin-bottom: 60px;">
+								<div  id="app9">
+									<ul>
+										<li v-for="mc in mContent">
+											<div class="mui-card-header mui-card-media">
+												<img v-bind:src=mc.myPic>
+												<div class="mui-media-body">
+													{{mc.myName}}&nbsp;{{mc.showType}}<span style="float: right;" id="foplus">关注</span>
+													<p>发表于 {{mc.outTime}}</p>
+													
+												</div>
+												
+												<!--<img class="mui-pull-left" src="../images/logo.png" width="34px" height="34px" />
+												<h2>小M</h2>
+												<p>发表于 2016-06-30 15:30</p>-->
+											</div>
+											<div class="mui-card-content" >
+												<img v-bind:src = mc.comPic>
+												<p id="location">定位中...</p>
+											</div>
+											<div class="mui-card-footer">
+												<a class="like">{{mc.likeNum}}</a>
+												<a class="comment">{{mc.commonNum}}</a>
+												<a class="share">{{mc.shareNum}}</a>
+											</div>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
-					
-				</div>
-				<div id="bottomshow">
-					<img  id="singerpic" src="img/app.png"/>
+					<div id="bottomshow" style="position: absolute;bottom: 0px;z-index: 999;">
+					<img id="singerpic" src="img/app.png"/>
 					<!--<div id="runorstop" style="float: right;">
 						<a id='more'></a>
 					</div>-->
-					<div style="float: right;">
+					<div style="display: inline-block;">
 						<a class="songname">春天里</a>
 						<a class="songname">汪峰</a>
+						
 					</div>
+					<span id="playorlist" style="float: right;margin-top: 13px;"></span>
 				</div>
+				</div>
+				
 				<!-- off-canvas backdrop -->
 				<div class="mui-off-canvas-backdrop"></div>
 			</div>
@@ -348,17 +401,18 @@
 		<script>
 			mui.init({  
 					swipeBack: false,
-                    /*subpages:[//先加载首页  
+                    subpages:[//先加载首页  
                         {  
                           url:'index.html',  
                           id:'index',  
-                          styles:{  
+                          /*styles:{  
                              top:'0px',  
                                 bottom:'60px'  
-                          }  
+                          }*/  
+                           styles: {bottom:'51px', bounce: 'vertical' } 
                         }  
-                          
-                    ], */ 
+                         
+                    ], 
                     preloadPages:[//缓存其他页面  
                         {  
                           url:'home/mine.html',  
@@ -401,7 +455,7 @@
             slider2.slider({  
     			interval: 1000
         	});
-            (function($) {
+            /*(function($) {
 				$('#scroll1').scroll({
 					indicators: false //是否显示滚动条
 				});
@@ -411,7 +465,7 @@
 				$('#offCanvasContentScroll').scroll({
 					indicators: false //是否显示滚动条
 				});
-			});
+			});*/
 			/*$.('.mui-scroll-wrapper').scroll({
 				indicators: true //是否显示滚动条
 			})(mui);*/
@@ -446,6 +500,12 @@
 					}
 				}
 			});
+			var isPlay = 'false';
+			document.getElementById('playorlist').addEventListener('tap',function(e){
+				console.log(234567);
+				document.getElementsByTagName('span')[13].outerHTML='<span id="playorlistchange" style="float: right;margin-top: 13px;"></span>';					
+					
+			},false);
 			/*var app4  = new Vue({
 				el:'#app4',
 				data:{
@@ -459,16 +519,36 @@
 					]
 				}
 			});*/
-			/*var app5 = new Vue({
-				el:'#app5',
+			var app8 = new Vue({
+				el:'#app8',
 				data:{
 					item:[
-						{name:'xiangdeshan',imgsrc:'img/mo.png'},
-						{name:'zhangjiayu',imgsrc:'img/mn.png'},
-						{name:'wanchen',imgsrc:'img/mp.png'}
+						{name:'本地音乐',imgsrc:'img/mo.png',num:7},
+						{name:'最近播放',imgsrc:'img/mn.png',num:10},
+						{name:'下载管理',imgsrc:'img/mp.png',num:17},
+						{name:'我的电台',imgsrc:'img/mp.png',num:8},
+						{name:'我的收藏',imgsrc:'img/mp.png',num:9}
+					]
+				},
+				methods:{
+					onSonglistDetail: function(){
+						console.loge(index);
+					},
+					choose: function () {
+             			console.log(321315325);
+            		}
+				}
+			});
+			var _date2= new Date();
+			var app9 = new Vue({
+				el:'#app9',
+				data:{
+					mContent:[
+						{myPic:'img/mp.png',myName:'Faker',showType:'发布文字',outTime:_date2.getHours()+':'+_date2.getMinutes(),content:'你的意识决定整个游戏的成败',comPic:'img/mo.png',type:'text',outAuther:'---掌上联盟',likeNum:'1000',commonNum:'999',shareNum:'670'},
+						{myPic:'img/mp.png',myName:'Faker',showType:'发布文字',outTime:'14:30',content:'你的意识决定整个游戏的成败',comPic:'img/mo.png',type:'text',outAuther:'---掌上联盟',likeNum:'1000',commonNum:'999',shareNum:'670'}
 					]
 				}
-			});*/
+			});
 			//document.getElementsByTagName('ul')[0].getElementsByTagName('li')[0].style.color = "#2AC845";
 			//document.getElementsByTagName('ul')[0].getElementsByTagName('li')[0].style.before
 			//console.log(document.getElementsByTagName('ul')[0].getElementsByTagName('li'));
